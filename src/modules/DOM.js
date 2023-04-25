@@ -1,4 +1,10 @@
-import { fetchCurrentWeather, clearInput} from "./fetchForecast";
+import { fetchCurrentWeather} from "./fetchForecast";
+
+const clearInput = () => {
+    const formInput = document.getElementById("input-form");
+    formInput.reset();
+}
+
 //DOM Module Pattern
 const domManip = () => {
     const searchButton = document.querySelector(".search-button");
