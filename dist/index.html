@@ -4,19 +4,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <script src="bundle.js" defer></script>
-    <title>Webpack App</title>
+    <title>The Weather</title>
   </head>
   <body>
-    <form class="input-form" id="input-form">
-      <label for="search">Find Weather Info by Location:</label>
-      <input type="text" id="search-city" class="search-city" name="search-city" placeholder="Enter City..." required />
-      <input type="text" id="search-country" class="search-country" name="search-country" placeholder="Enter Country..." required />
-
-
-      <input type="button" class="search-button" id="search-button" value="Search!"> 
-    </form>
+    <main class="flex justify-between px-6 md:p-20">
     
+      <div class="weather-info max-w-md">
+
+        <div class="info-desc mb-1 text-4xl leading-6 font-medium">Broken Clouds</div>
+        <div class="info-city mb-1 text-lg font-medium">Barcelona, VE</div>
+        <div class="info-date text-sm font-semibold">Wednesday, 26th April 2023</div>
+        <div class="info-time text-sm font-semibold">2:13 am</div>
+        <div class="info-temp mt-7 text-5xl font-bold">16 °C</div>
+        <div class="info-icon w-20 mb-7">
+          <img src="./images/SVG/cloudy.svg" alt="">
+        </div>
+
+
+        <form class="input-form flex flex-col" id="input-form">
+          <label for="search-city" class="mt-4 font-semibold">Search city</label>
+          <input type="text" id="search-city" class="search-city border-solid border-b-2 border-white bg-transparent
+          text-white placeholder-white" name="search-city" placeholder="London, New York..." required />
+          <label for="search-country" class="mt-4 font-semibold">Search country</label>
+          <input type="text" id="search-country" class="search-country border-solid border-b-2 border-white bg-transparent
+          text-white placeholder-white" name="search-country" placeholder="UK, US, JP, ES..." required />
+    
+    
+          <input type="button" class="search-button mt-4 w-20 cursor-pointer 
+          rounded-md border-solid border-2 border-white font-semibold
+          transition-all duration-300
+          hover:bg-white hover:text-black" id="search-button" value="Search!"> 
+        </form>
+      </div>
+
+      <div class="weather-details-container">
+        <div class="weather-details flex mb-8 items-center">
+          <div class="weather-details-icon w-12 mr-2">
+            <img src="../dist/images/SVG/temperature.svg" alt="">
+          </div>
+          <div class="weather-details-flex flex flex-col">
+            <div class="weather-details-label text-base font-semibold">Feels Like</div>
+            <div class="weather-details-data text-4xl font-medium" id="feels-like">80° C</div>
+          </div>
+        </div>
+
+        <div class="weather-details flex mb-8 items-center">
+          <div class="weather-details-icon w-12 mr-2">
+            <img src="../dist/images/SVG/humidity.svg" alt="">
+          </div>
+          <div class="weather-details-flex flex flex-col">
+            <div class="weather-details-label text-base font-semibold">Humidity</div>
+            <div class="weather-details-data text-4xl font-medium" id="humidity">75 %</div>
+          </div>
+        </div>
+
+        <div class="weather-details flex mb-8 items-center">
+          <div class="weather-details-icon w-12 mr-2">
+            <img src="../dist/images/SVG/wind.svg" alt="">
+          </div>
+          <div class="weather-details-flex flex flex-col">
+            <div class="weather-details-label text-base font-semibold">Wind Speed</div>
+            <div class="weather-details-data text-4xl font-medium" id="wind-speed">3.67 km/h</div>
+          </div>
+        </div>
+
+      </div>
+
+      
+    </main>
+    
+
+
     
 
 

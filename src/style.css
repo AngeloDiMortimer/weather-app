@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),url('../dist/images/background.jpg');
+    background-size: cover;
+    color: whitesmoke;
+    font-family: 'Montserrat', sans-serif;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+}
+
+img {
+    filter: invert(100%) sepia(5%) saturate(227%) hue-rotate(197deg) brightness(118%) contrast(93%);
+}
