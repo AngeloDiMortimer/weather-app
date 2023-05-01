@@ -7,15 +7,19 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
     <script src="bundle.js" defer></script>
     <title>The Weather</title>
   </head>
-  <body>
-    <main class="flex justify-between px-6 md:p-20">
+  <body class="flex flex-col justify-between">
+    <main class="flex justify-between p-6 md:px-20 md:pt-20">
     
       <div class="weather-info max-w-md">
 
-        <div class="info-desc mb-1 text-4xl leading-6 font-medium">Broken Clouds</div>
+        <div class="info-desc mb-1 text-4xl font-medium">Broken Clouds</div>
         <div class="info-city mb-1 text-lg font-medium">Barcelona, VE</div>
         <div class="info-date text-sm font-semibold">Wednesday, 26th April 2023</div>
         <div class="info-time text-sm font-semibold">2:13 am</div>
@@ -77,10 +81,109 @@
       
     </main>
     
+    <div class="forecast flex flex-col items-center px-6 md:px-20">
+      <div class="title flex flex-col text-4xl leading-6 border-solid border-b-2 border-white 
+      font-semibold items-center pb-5 my-7">Forecast</div>
+      <div class="forecast-container flex flex-col gap-5 md:flex-row md:gap-16">
+        
+        <div class="forecast-item flex flex-row gap-16 md:flex-col md:gap-0" id="item-1">
+          
+          <div class="forecast-day mb-2 text-2xl font-semibold">Monday</div>
+          
+          <div class="forecast-temperature">
+            <div class="temp-high text-2xl font-bold text-2xl font-bold">90 °C</div>
+            <div class="temp-low text-sm">20 °C</div>
+          </div>
 
+          <div class="forecast-icon w-10">
+            <img src="./images/SVG/cloudy.svg" alt="">
+          </div>
+        </div>
+
+        <div class="forecast-item flex flex-row gap-16 md:flex-col md:gap-0" id="item-2">
+          <div class="forecast-day mb-2 text-2xl font-semibold">Monday</div>
+          
+          <div class="forecast-temperature">
+            <div class="temp-high text-2xl font-bold">90 °C</div>
+            <div class="temp-low text-sm">20 °C</div>
+          </div>
+
+          <div class="forecast-icon w-10">
+            <img src="./images/SVG/cloudy.svg" alt="">
+        </div>
+
+        </div>
+
+        <div class="forecast-item flex flex-row gap-16 md:flex-col md:gap-0" id="item-3">
+          <div class="forecast-day mb-2 text-2xl font-semibold">Monday</div>
+          
+          <div class="forecast-temperature">
+            <div class="temp-high text-2xl font-bold">90 °C</div>
+            <div class="temp-low text-sm">20 °C</div>
+          </div>
+
+          <div class="forecast-icon w-10">
+            <img src="./images/SVG/cloudy.svg" alt="">
+        </div>
+        </div>
+
+        <div class="forecast-item flex flex-row gap-16 md:flex-col md:gap-0" id="item-4">
+          <div class="forecast-day mb-2 text-2xl font-semibold">Monday</div>
+          
+          <div class="forecast-temperature">
+            <div class="temp-high text-2xl font-bold">90 °C</div>
+            <div class="temp-low text-sm">20 °C</div>
+          </div>
+
+          <div class="forecast-icon w-10">
+            <img src="./images/SVG/cloudy.svg" alt="">
+        </div>
+        </div>
+
+        <div class="forecast-item flex flex-row gap-16 md:flex-col md:gap-0" id="item-5">
+          <div class="forecast-day mb-2 text-2xl font-semibold">Monday</div>
+          
+          <div class="forecast-temperature">
+            <div class="temp-high text-2xl font-bold">90 °C</div>
+            <div class="temp-low text-sm">20 °C</div>
+          </div>
+
+          <div class="forecast-icon w-10">
+            <img src="./images/SVG/cloudy.svg" alt="">
+        </div>
+        </div>
+
+        <div class="forecast-item flex flex-row gap-16 md:flex-col md:gap-0" id="item-6">
+          <div class="forecast-day mb-2 text-2xl font-semibold">Monday</div>
+          
+          <div class="forecast-temperature">
+            <div class="temp-high text-2xl font-bold">90 °C</div>
+            <div class="temp-low text-sm">20 °C</div>
+          </div>
+
+          <div class="forecast-icon w-10">
+            <img src="./images/SVG/cloudy.svg" alt="">
+        </div>
+        </div>
+
+        <div class="forecast-item flex flex-row gap-16 md:flex-col md:gap-0" id="item-7">
+          <div class="forecast-day mb-2 text-2xl font-semibold">Monday</div>
+          
+          <div class="forecast-temperature">
+            <div class="temp-high text-2xl font-bold">90 °C</div>
+            <div class="temp-low text-sm">20 °C</div>
+          </div>
+
+          <div class="forecast-icon w-10">
+            <img src="./images/SVG/cloudy.svg" alt="">
+        </div>
+        </div>
+
+      </div>
+    </div>
 
     
 
-
+    <footer class="footer flex items-center justify-center w-full p-4 text-xl mt-9">Angelo Martinez &copy; <script>document.write(new Date().getFullYear());</script></footer>
   </body>
 </html>
