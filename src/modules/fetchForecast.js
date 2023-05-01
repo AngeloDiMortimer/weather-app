@@ -37,10 +37,7 @@ const fetchCurrentWeather = async () => {
 
         const newWeather = createWeather(currentData); //creates new Weather object
 
-        const responFore = await fetch("https://api.openweathermap.org/data/2.5/forecast?q=" + searchCity + "," + searchCountry + "&units=metric&appid=e39d30bcea67c9dc937b80d55b763470", {mode: "cors"});
-        const foreData = await responFore.json();
-        console.log("Fetching current data from API...", foreData);
-
+        
 
         /* Formats the date
         const dateTest = new Date(currentData.dt*1000); // minus

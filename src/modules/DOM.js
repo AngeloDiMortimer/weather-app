@@ -1,5 +1,5 @@
 import { fetchCurrentWeather} from "./fetchForecast";
-
+import { fetch5Days } from "./fetch5Day";
 const clearInput = () => {
     const formInput = document.getElementById("input-form");
     formInput.reset();
@@ -11,6 +11,7 @@ const domManip = () => {
     searchButton.addEventListener("click", (e) => {
         
         fetchCurrentWeather();
+        fetch5Days();
         clearInput();
         
     });
