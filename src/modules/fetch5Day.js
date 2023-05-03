@@ -1,8 +1,7 @@
-import {format} from "date-fns";
 
 class Forecast {
-    constructor (main, date, minTemp, maxTemp) {
-        this.main = main;
+    constructor (desc, date, minTemp, maxTemp) {
+        this.desc = desc;
         this.date = date;
         this.minTemp = minTemp;
         this.maxTemp = maxTemp;
@@ -10,12 +9,12 @@ class Forecast {
 }
 
 const createForecast = (arrayForeData) => {
-    const main = arrayForeData.weather[0].main;
+    const desc = arrayForeData.weather[0].description;
     const date = new Date(arrayForeData.dt*1000);
-    const minTemp = Math.round(arrayForeData.main.temp_min);
-    const maxTemp = Math.round(arrayForeData.main.temp_max);
+    const minTemp = Math.round(arrayForeData.main.temp_min) + " °C";
+    const maxTemp = Math.round(arrayForeData.main.temp_max) + " °C";
 
-    return new Forecast(main, date, minTemp, maxTemp);
+    return new Forecast(desc, date, minTemp, maxTemp);
 }
 
 const fetch5Days = async () => {
@@ -35,7 +34,8 @@ const fetch5Days = async () => {
             fiveDays.push(temporary);
         }
 
-        console.log("Fetching current data from API...", fiveDays);
+        console.log("Fetching current data from API...", foreData);
+        console.log(fiveDays);
 
 
 
