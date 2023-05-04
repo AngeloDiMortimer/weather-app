@@ -19,13 +19,13 @@
     
       <div class="weather-info max-w-md">
 
-        <div class="info-desc mb-1 text-4xl font-medium">Broken Clouds</div>
-        <div class="info-city mb-1 text-lg font-medium">Barcelona, ES</div>
-        <div class="info-date text-sm font-semibold">Wednesday, 26th April 2023</div>
-        <div class="info-time text-sm font-semibold">2:13 am</div>
-        <div class="info-temp mt-7 text-5xl font-bold">16 °C</div>
+        <div class="info-desc mb-1 text-4xl font-medium"></div>
+        <div class="info-city mb-1 text-lg font-medium"></div>
+        <div class="info-date text-sm font-semibold"></div>
+        <div class="info-time text-sm font-semibold"></div>
+        <div class="info-temp mt-7 text-5xl font-bold"></div>
         <div class="info-icon w-20 mb-7">
-          <img class="info-img" src="./images/SVG/cloudy.svg" alt="">
+          <img class="info-img" src="" alt="">
         </div>
 
 
@@ -35,7 +35,7 @@
           text-white placeholder-white focus:outline-none" name="search-city" placeholder="London, New York..." required />
           <label for="search-country" class="mt-4 font-semibold">Search country</label>
           <input type="text" id="search-country" class="search-country border-solid border-b-2 border-white bg-transparent
-          text-white placeholder-white focus:outline-none" name="search-country" placeholder="UK, US, JP, ES..." required />
+          text-white placeholder-white focus:outline-none" name="search-country" placeholder="GB, US, JP, ES..." required />
     
     
           <input type="button" class="search-button mt-4 w-20 cursor-pointer 
@@ -52,7 +52,7 @@
           </div>
           <div class="weather-details-flex flex flex-col">
             <div class="weather-details-label text-base font-semibold">Feels Like</div>
-            <div class="weather-details-data text-4xl font-medium" id="feels-like">80° C</div>
+            <div class="weather-details-data text-4xl font-medium" id="feels-like"></div>
           </div>
         </div>
 
@@ -62,7 +62,7 @@
           </div>
           <div class="weather-details-flex flex flex-col">
             <div class="weather-details-label text-base font-semibold">Humidity</div>
-            <div class="weather-details-data text-4xl font-medium" id="humidity">75 %</div>
+            <div class="weather-details-data text-4xl font-medium" id="humidity"></div>
           </div>
         </div>
 
@@ -72,7 +72,7 @@
           </div>
           <div class="weather-details-flex flex flex-col">
             <div class="weather-details-label text-base font-semibold">Wind Speed</div>
-            <div class="weather-details-data text-4xl font-medium" id="wind-speed">3.67 km/h</div>
+            <div class="weather-details-data text-4xl font-medium" id="wind-speed"></div>
           </div>
         </div>
 
@@ -86,71 +86,25 @@
       font-semibold items-center pb-5 my-7">Forecast</div>
       <div class="forecast-container flex flex-col gap-5 md:flex-row md:gap-28">
         
-        <div class="forecast-item flex flex-row gap-16 md:flex-col md:gap-0" id="item">
+        <div class="forecast-item flex flex-row justify-between gap-16 md:flex-col md:gap-0" id="item">
           
-          <div class="forecast-day mb-2 text-2xl font-semibold">Monday</div>
+        </div>
+
+        <div class="forecast-item flex flex-row justify-between gap-16 md:flex-col md:gap-0" id="item">
           
-          <div class="forecast-temperature">
-            <div class="temp-high text-2xl font-bold text-2xl font-bold">90 °C</div>
-            <div class="temp-low text-sm">20 °C</div>
-          </div>
 
-          <div class="forecast-icon w-10">
-            <img src="./images/SVG/cloudy.svg" alt="">
-          </div>
         </div>
 
-        <div class="forecast-item flex flex-row gap-16 md:flex-col md:gap-0" id="item">
-          <div class="forecast-day mb-2 text-2xl font-semibold">Monday</div>
+        <div class="forecast-item flex flex-row justify-between gap-16 md:flex-col md:gap-0" id="item">
           
-          <div class="forecast-temperature">
-            <div class="temp-high text-2xl font-bold">90 °C</div>
-            <div class="temp-low text-sm">20 °C</div>
-          </div>
-
-          <div class="forecast-icon w-10">
-            <img src="./images/SVG/cloudy.svg" alt="">
         </div>
 
-        </div>
-
-        <div class="forecast-item flex flex-row gap-16 md:flex-col md:gap-0" id="item">
-          <div class="forecast-day mb-2 text-2xl font-semibold">Monday</div>
+        <div class="forecast-item flex flex-row justify-between gap-16 md:flex-col md:gap-0" id="item">
           
-          <div class="forecast-temperature">
-            <div class="temp-high text-2xl font-bold">90 °C</div>
-            <div class="temp-low text-sm">20 °C</div>
-          </div>
-
-          <div class="forecast-icon w-10">
-            <img src="./images/SVG/cloudy.svg" alt="">
-        </div>
         </div>
 
-        <div class="forecast-item flex flex-row gap-16 md:flex-col md:gap-0" id="item">
-          <div class="forecast-day mb-2 text-2xl font-semibold">Monday</div>
+        <div class="forecast-item flex flex-row justify-between gap-16 md:flex-col md:gap-0" id="item">
           
-          <div class="forecast-temperature">
-            <div class="temp-high text-2xl font-bold">90 °C</div>
-            <div class="temp-low text-sm">20 °C</div>
-          </div>
-
-          <div class="forecast-icon w-10">
-            <img src="./images/SVG/cloudy.svg" alt="">
-        </div>
-        </div>
-
-        <div class="forecast-item flex flex-row gap-16 md:flex-col md:gap-0" id="item">
-          <div class="forecast-day mb-2 text-2xl font-semibold">Monday</div>
-          
-          <div class="forecast-temperature">
-            <div class="temp-high text-2xl font-bold">90 °C</div>
-            <div class="temp-low text-sm">20 °C</div>
-          </div>
-
-          <div class="forecast-icon w-10">
-            <img src="./images/SVG/cloudy.svg" alt="">
-        </div>
         </div>
 
 
