@@ -10,9 +10,11 @@ const clearInput = () => {
 const domManip = () => {
     const searchButton = document.querySelector(".search-button");
     searchButton.addEventListener("click", async (e) => {
+        const searchCity = document.getElementById("search-city").value;
+        const searchCountry = document.getElementById("search-country").value;
         
-        const cWeather = await fetchCurrentWeather();
-        const forecast5Days = await fetch5Days();
+        const cWeather = await fetchCurrentWeather(searchCity, searchCountry);
+        const forecast5Days = await fetch5Days(searchCity, searchCountry);
         
         generatePage(cWeather, forecast5Days); //funcion inutil por ahora
         clearInput();

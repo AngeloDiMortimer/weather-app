@@ -30,12 +30,9 @@ const createWeather = (currentData) => {
 }
 
 // Async function to fetch current forecast from user input
-const fetchCurrentWeather = async () => {
+const fetchCurrentWeather = async (searchCity, searchCountry) => {
     try {
         
-        const searchCity = document.getElementById("search-city").value;
-        const searchCountry = document.getElementById("search-country").value;
-
         const response = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + searchCity + "," + searchCountry + "&units=metric&appid=e39d30bcea67c9dc937b80d55b763470", {mode: "cors"});
         const currentData = await response.json();
         
