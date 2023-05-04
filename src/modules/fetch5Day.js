@@ -32,11 +32,6 @@ const fetch5Days = async (searchCity, searchCountry) => {
             fiveDays.push(temporary);
         }
 
-        console.log("Fetching current data from API...", foreData);
-        console.log(fiveDays);
-
-
-
         return fiveDays;
 
     } catch (err) {

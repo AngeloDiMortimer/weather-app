@@ -23,7 +23,7 @@ const createWeather = (currentData) => {
     const temp = Math.round(currentData.main.temp) + " °C";
     const feels = Math.round(currentData.main.feels_like) + " °C";
     const humidity = currentData.main.humidity + "%";
-    const wind = currentData.wind.speed + "km/h";
+    const wind = currentData.wind.speed + " km/h";
 
     return new Weather(weather, desc, place, date, temp, feels, humidity, wind);
 
@@ -37,8 +37,7 @@ const fetchCurrentWeather = async (searchCity, searchCountry) => {
         const currentData = await response.json();
         
         const newWeather = createWeather(currentData); //creates new Weather object
-        console.log("Fetching current data from API...", currentData);
-        console.log(newWeather);
+        
 
         return newWeather;
 
