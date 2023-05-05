@@ -112,7 +112,7 @@ const generateForecast = (item, forecast) => {
     const foreIcon = document.createElement("div");
     const imgForecast = document.createElement("img");
     
-    foreDay.classList.add("forecast-day", "mb-2", "text-2xl", "font-semibold");
+    foreDay.classList.add("forecast-day", "mb-2","text-sm", "md:text-3xl", "font-semibold");
     tempContainer.classList.add("forecast-temperature");
     tempHigh.classList.add("temp-high", "text-2xl", "font-bold", "text-2xl", "font-bold");
     tempLow.classList.add("temp-low", "text-sm");
